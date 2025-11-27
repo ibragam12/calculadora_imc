@@ -18,9 +18,11 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
+        title: const Text('CALCULADORA DE IMC'),
       ),
-      body: Column(
+      body: SafeArea(
+        child: 
+        Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -30,7 +32,7 @@ class ResultsPage extends StatelessWidget {
               child: Align(
                 alignment: Alignment.bottomLeft,
                 child: Text(
-                  'Your Result',
+                  'TU RESULTADO',
                   style: kTitleTextStyle,
                 ),
               ),
@@ -79,12 +81,13 @@ class ResultsPage extends StatelessWidget {
           //   'Good Job! Your BMI is normal . Keeping maintainig it!',
           // ),
           BottomButton(
-            buttonTitle: 'RECALCULATE',
+            buttonTitle: 'RECALCULAR',
             onTap: () {
               Navigator.pop(context);
             },
           )
         ],
+      ),
       ),
     );
   }

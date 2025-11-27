@@ -34,7 +34,8 @@ class _InputPageState extends State<InputPage> {
           child: Text('CALCULADORA DE IMC'),
         ),
       ),
-      body: Column(
+      body: SafeArea( 
+        child: Column(
         children: <Widget>[
           Expanded(
             child: Row(
@@ -233,6 +234,7 @@ class _InputPageState extends State<InputPage> {
             },
           ),
         ],
+      ),
       ),
     );
   }
